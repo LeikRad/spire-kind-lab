@@ -1,0 +1,74 @@
+Received 1 svid after 9.029723ms
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:49:01 +0000 UTC
+SVID Valid Until:	2026-11-04 01:51:11 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 53.160142129s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:49:56 +0000 UTC
+SVID Valid Until:	2026-11-04 01:52:06 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 1m1.180807898s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:50:58 +0000 UTC
+SVID Valid Until:	2026-11-04 01:53:08 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 55.681550352s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:51:53 +0000 UTC
+SVID Valid Until:	2026-11-04 01:54:03 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 55.385729019s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:52:49 +0000 UTC
+SVID Valid Until:	2026-11-04 01:54:59 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 59.373814149s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:53:48 +0000 UTC
+SVID Valid Until:	2026-11-04 01:55:58 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 57.020197877s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:54:45 +0000 UTC
+SVID Valid Until:	2026-11-04 01:56:55 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 55.865085257s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-b
+SVID Valid After:	2026-11-04 01:55:41 +0000 UTC
+SVID Valid Until:	2026-11-04 01:57:51 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
+rpc error: code = PermissionDenied desc = no identity issued
