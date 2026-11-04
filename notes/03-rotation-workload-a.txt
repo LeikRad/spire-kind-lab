@@ -1,0 +1,64 @@
+Received 1 svid after 14.645972ms
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:48:17 +0000 UTC
+SVID Valid Until:	2026-11-04 01:50:27 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 12.993278016s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:49:16 +0000 UTC
+SVID Valid Until:	2026-11-04 01:51:26 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 50.496105434s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:50:07 +0000 UTC
+SVID Valid Until:	2026-11-04 01:52:17 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 1m1.53966717s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:51:08 +0000 UTC
+SVID Valid Until:	2026-11-04 01:53:18 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 1m0.077801119s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:52:08 +0000 UTC
+SVID Valid Until:	2026-11-04 01:54:18 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 55.446982373s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:53:04 +0000 UTC
+SVID Valid Until:	2026-11-04 01:55:14 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 59.719712626s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:54:03 +0000 UTC
+SVID Valid Until:	2026-11-04 01:56:13 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
+Received 1 svid after 56.192266363s
+
+SPIFFE ID:		spiffe://example.org/ns/default/sa/workload-a
+SVID Valid After:	2026-11-04 01:55:00 +0000 UTC
+SVID Valid Until:	2026-11-04 01:57:10 +0000 UTC
+CA #1 Valid After:	2026-11-04 01:31:37 +0000 UTC
+CA #1 Valid Until:	2026-11-05 01:31:47 +0000 UTC
+
