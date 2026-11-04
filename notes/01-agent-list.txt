@@ -1,0 +1,8 @@
+Found 1 attested agent:
+
+SPIFFE ID         : spiffe://example.org/spire/agent/k8s_psat/demo-cluster/0e19944a-abf3-4f3e-934f-8cf824666013
+Attestation type  : k8s_psat
+Expiration time   : 2026-11-04 02:31:57 +0000 UTC
+Serial number     : 156250746537252167781964134438173937653
+Can re-attest     : true
+
