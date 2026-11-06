@@ -1,4 +1,4 @@
-d# spire-kind-lab
+# spire-kind-lab
 
 SPIRE running on a local kind cluster, issuing SPIFFE identities to two workloads. I made it to understand workload identity: how a pod gets a certificate without being given any secret, and what that certificate actually proves.
 Once both workloads had their identities, I broke it on purpose: revoked an identity, tried to impersonate a workload, and killed the agent.
@@ -7,13 +7,13 @@ This builds on [mini-ca-mtls](https://github.com/LeikRad/mini-ca-mtls), where I 
 
 ## What's in here
 
-| Path                                        | What it is                                                                                    |
-| ------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `kind-config.yaml`                          | kind cluster with one control-plane node and one worker.                                      |
-| `manifests/`                                | SPIRE server and agent (`kubectl apply -k`), plus `workload-a.yaml` and `workload-b.yaml`.    |
-| `scripts/create-node-registration-entry.sh` | Registers the node alias that every agent in the cluster gets.                                |
-| `scripts/register-workloads.sh`             | Registers `workload-a` and `workload-b` with a 120 second SVID TTL.                           |
-| `notes/`                                    | Output captured during the experiments below: entries, SVIDs, rotation logs, failures.        |
+| Path                                        | What it is                                                                                 |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `kind-config.yaml`                          | kind cluster with one control-plane node and one worker.                                   |
+| `manifests/`                                | SPIRE server and agent (`kubectl apply -k`), plus `workload-a.yaml` and `workload-b.yaml`. |
+| `scripts/create-node-registration-entry.sh` | Registers the node alias that every agent in the cluster gets.                             |
+| `scripts/register-workloads.sh`             | Registers `workload-a` and `workload-b` with a 120 second SVID TTL.                        |
+| `notes/`                                    | Output captured during the experiments below: entries, SVIDs, rotation logs, failures.     |
 
 The SPIRE manifests and the node registration script are adapted from the Kubernetes quickstart in [spiffe/spire-tutorials](https://github.com/spiffe/spire-tutorials) (Apache-2.0). I bumped the workload image from 1.5.1 to 1.11.2 to match the server and agent.
 
@@ -132,12 +132,12 @@ Full log in `notes/03-rotation-workload-a.txt`.
 
 ## Breaking it
 
-| #   | What I did                                         | What happened                                                                      |
-| --- | -------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| 1   | Deleted `workload-b`'s entry                       | `PermissionDenied: no identity issued` within seconds. Its last cert stayed valid. |
-| 2   | Re-created the entry                               | The same running pod got its identity back. No restart.                            |
-| 3   | Same ServiceAccount name, different namespace      | `no identity issued`. The namespace selector didn't match.                         |
-| 4   | Deleted the agent pod                              | The workload lost the socket for ~17s, then reconnected and got a new SVID.        |
+| #   | What I did                                    | What happened                                                                      |
+| --- | --------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 1   | Deleted `workload-b`'s entry                  | `PermissionDenied: no identity issued` within seconds. Its last cert stayed valid. |
+| 2   | Re-created the entry                          | The same running pod got its identity back. No restart.                            |
+| 3   | Same ServiceAccount name, different namespace | `no identity issued`. The namespace selector didn't match.                         |
+| 4   | Deleted the agent pod                         | The workload lost the socket for ~17s, then reconnected and got a new SVID.        |
 
 ### 1. Revoking an identity
 
@@ -224,5 +224,5 @@ Agent lists in `notes/01-agent-list.txt` and `notes/09-agent-list-after-restart.
 - **TTL is a tradeoff.** A short TTL limits how long a leaked or revoked cert works (experiment 1). A long TTL lets workloads survive longer agent outages, because a workload is fine as long as the agent is back before its current cert expires (experiment 4). With 120s that's about a minute of tolerance.
 - **Kubernetes RBAC is part of the trust boundary.** Selectors stop naming tricks, but anyone who can create pods in `default` running as `workload-a` gets that identity legitimately.
 - **`skip_kubelet_verification = true`.** The agent doesn't verify the kubelet's TLS cert, because kind doesn't give it one the cluster CA can check. Fine for a lab, not for production.
-- **The workloads run with `hostPID` and `hostNetwork`**, copied from the quickstart client. The agent is the one that looks up PIDs, so the workloads probably don't need either. I haven't tested removing them yet.
+- **The workloads run with `hostPID` and `hostNetwork`**, copied from the quickstart client. They don't need either: in [spiffe-mtls-services](https://github.com/LeikRad/spiffe-mtls-services) the workloads run without them and still get their SVIDs, because the agent looks up the caller's PID on its own side.
 - **Trust domain is `example.org`.** It's the quickstart default.
